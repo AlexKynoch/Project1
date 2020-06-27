@@ -19,9 +19,9 @@
         <img height = "120" width = "350" src="images/gitLogo.png " alt="Git logo with word git and an image of a branch being created in Git">
         <img height = "120" width = "120" src="images/gitBashLogo.png " alt="GitBash logo with an image of a branch being created in Git">
         
-        <h1>What is a Repository?</h1>
+        <h1>Making a local Repository</h1>
        
-      <h2>Local Repositories</h2>
+      <!-- <h3>Local Repositories</h3>
       
       <p>Git puts a <b>.git</b> folder within the route of your project this is your 
         local repository its local to you as it is on your computer/laptop. 
@@ -31,63 +31,79 @@
         and you will be left with just the one you have now, (if you haven’t saved 
         it to a remote repository). We can access git locally at the command line 
         using git bash or in the terminal of Visual Studio Code.</p> 
-        <h2>Remote Repositories</h2>
+        <h3>Remote Repositories</h3>
       
         <p>Your local repository .git will also keeps track of other repositories 
         you can also have a remote repository in this case GitHub.  GitHub allows 
         you to send (<b>push</b>) your files to GitHub to be saved there as well and to retrieve 
-        (<b>pull</b>) files from GitHub to use locally.</p>
+        (<b>pull</b>) files from GitHub to use locally.</p> -->
 
-        <!-- <h3>Making a local repository</h3>
-        <h4>Making a folder</h4>
+        <h2>Making a folder</h2>
+        
         <p>Before we can make a local repository we need to create a folder i made 
         mine on desktop and called it HelloWorld.</p>
         <img src = "images/newFolder.png">
-        <h4>Opening bash</h4>
+
+        <h2>Opening bash</h2>
+
         <p>Right click on folder and choose – <b>git bash here</b> to open a git bash window.
             This saves you having to open a bash window and navigate to your folder as it is 
             already there.</p>
             <img src = "images/bashOpening.png">
-            <h4>Making a file with touch</h4>
+
+            <h2>Making a file with touch</h2>
+
             <p>Now we can create a new file called index.html using <b>touch</b>.</p>
-            
-            <img src = "images/newTouch.png">
+            <img src = "images/newTouch.png"><br>
+
             <p>We can see this file has now appeared in our folder in <b>File Explorer.</b></p>
             <img src = "images/fileExplorer.png">
+
             <p>Or We can use <b>ls</b> in bash to list the files in our directory.</p>
             <img src = "images/lsBash.png">
-            <h4>Making a file with nano</h4>
+
+            <h2>Making a file with nano</h2>
+
             <p>We could also have created a file using <b>nano</b> instead, nano 
             allows you to add content to your file.</p>
             <img src = "images/nano.png">
+
             <p><b>Ctrl x</b> to escape nano.</p>
             <img src = "images/nanoEdit.png">
+
             <p><b>Y</b> or <b>N</b> to save changes or not.</p>
             <img src = "images/nanoSave.png">
+
             <p>And <b>enter</b> to go back to bash.</p>
             <img src = "images/nanoB2Bash.png">
+
             <p>This looks the same as when we used <b>touch</b> to create a file but 
             by using <b>nano</b> we have created a file and added content as well.</p>
             <img src = "images/nanoLsBash.png">
+
             <p>In <b>File Explorer</b> the file size has grown from 0 to 1KB.</p>
             <img src = "images/nanoFileExplorer.png">
+
             <p>And in <b>Chrome</b> it looks like this.</p>
             <img src = "images/nanoInChrome.png">
-            <h4>Adding git</h4>
+
+            <h2>Adding git</h2>
+
             <p>To initialize this folder as a git repository (to put git in this folder) use <b>$git init</b>.</p>
             <img src = "images/gitInitialize.png">
+
             <p>you cant see it in <b>File Explorer</b> because it is a hidden file.</p>
             <img src = "images/fileExplorerGit.png">
+
             <p>Although you can change the settings to show hidden files using view then options folder if you want 
-            to see it. It would appear as <b>.git</b> (I’m not going to do that. If I can see it there’s a chance 
-            I can accidentally delete it. just knowing its there is enough for me).</p>
- -->
+            to see it. It would appear as <b>.git</b> (I’m not going to do that. If you can't see it you can't 
+            accidentally delete it).</p>
 
+            <p>Before git will track our changes we need to stage our files and commit them.</p>
 
-
-       
-        <li><a href="localRep.html">Making a local Repository</a></li>
-         <a href = "index.html">Home</a>
+        <a href = "index.html">Home</a>
+        <a href = "index.html">Stage and Commit</a>
+        
         <br>
       <br>
       <br>    
