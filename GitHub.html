@@ -20,52 +20,67 @@
         <img height = "120" width = "120" src="images/gitBashLogo.png " alt="GitBash logo with an image of a branch being created in Git">
         
         <h1>Remote Repositories</h1>
+        <h2>Making a Remote Repository</h2>
        
       
         
         
-        <p>Git status shows we are currently on the master branch we don’t want 
-        to push our code to the master branch as the master branch is used for production ready 
-        working code. if our work was only partially completed or wrong it would break code that 
-        is currently on the master branch and working. It is safer to move our files onto a 
-        different branch to make changes.</p>
+        <p>To create a remote repository and link it to our local. Go to <b>GitHub</b> sign in and click on <b>your repositories</b>.</p>
 
-        <img src = "images/workflow.png"><br>
+        <img src = "images/yourRepositoriesGitHub.png"><br>
 
-        <p>We can create a feature branch from master to make our changes in we can stage our files 
-            and commit them from the new branch and later when everything is completed and working 
-            properly, we can push them to master.</p>
-            <p>If we were working on a landing page we could type
-            <b>git branch landing page</b> this would create a feature branch called landing page.</p>
-        <img src = "images/newBranch.png"><br>
-        <p>We are still on the master branch to change to the landing page branch we need git checkout 
-        name of branch <b>git checkout landingPage</b>.</p>
-        <img src = "images/gitCheckout.png"><br>
-        <p>Now we are on the landing page branch. This has our index.html file in it and is currently 
-            the same as the one in master</p>
-        <img src = "images/landingPageBranch.png"><br>
-        <p>But now if we make changes.</p>
-        <img src = "images/changeFileNewBranch.png"><br>
-        <img src = "images/changeFileNewBranchChrome.png"><br>
-        <p>Stage and commit them.</p>
-        <img src = "images/commitToNewBranch.png"><br>
-        <p>They are saved to the landing page branch but not the master branch, we can go back to master 
-        to see using <b>git checkout master</b> master still has this version.</p>
-        <img src = "images/masterVersion.png"><br>
-        <img src = "images/masterVersionChrome.png"><br>
-        <p>In the landingPage branch we can make changes, stage and commit them and master will not be 
-        changed as the commits are being made to the landingPage branch instead of master.</p>
-        <p>Now everthing is completed we can merge everthing back into master.  We need to go into the 
-        master branch <b>git checkout master</b> and git merge branch name <b>git merge landingPage.</b></p>
-        <img src = "images/gitMerge.png"><br>
-        <p>Now when we look at index.html from master it includes our changes.</p>
-        <img src = "images/masterWithChanges.png"><br>
-        <img src = "images/masterWithChangesChrome.png"><br>
+        <p>Click <b>New</b>.</p>
+            
+        <img src = "images/createNewRepositoryGithub.png"><br>
+
+        <p>Give it a name, description choose public or private etc you can choose to add a README file if you want this is a place 
+        to store details of what your repository is about for anyone who uses it.</p>
+        <img src = "images/createNewRepositoryGithub2.png"><br>
+        <p>Click <b>create repository</b>.</p></p>
+        <img src = "images/getGithubLink.png"><br>
+        <p>Copy the highlighted link and go back to bash.</p>
+        
+        <h2>Adding a Remote Repository to git</h2>
+        <p><b>git remote</b> lists the remote repositories.</p>
+        <img src = "images/gitRemote.png"><br>
+        <p>There are no remote repositories to add the new one we just made paste the highlighted line into bash</p>
+        <img src = "images/pasteRemoteAddressBash.png"><br>
+        <p>Now we have added our remote repository to git and it is called origin. Now copy and paste the next 
+        highlighted line into bash.</p>
+        <img src = "images/pasteNextLineFromGitHub.png"><br>
+        <img src = "images/pasteNextLineFromGitHub2.png"><br>
+        <p>This pushes everything to the new repository when you refresh GitHub all your files should be there.</p>
+        <img src = "images/filesInGithub.png"><br>
+        <h2>Adding new content</h2>
+
+        <p>Index.html is now in the remote repository. If we add a new file</p>
+        <img src = "images/addANewFile.png"><br>
+        <p>Add content to it.</p>
+        <img src = "images/newFileInNano.png"><br>
+        <p>Its not tracked. (Probably should have done this in a feature branch you can find out all about branches on the
+        <a href = "branches.html">branches page</a>).</p>
+        
+        <img src = "images/untrakedFiles.png"><br>
+        <p><b>git add .</b> to stage it, now it is being tracked and <b>git commit</b>.</p>
+        <img src = "images/addAndCommit.png"><br>
+        <h2>Pushing to GitHub</h2>
+
+        <p>The new file landingPage.html is saved but only to our local repository to send it to the remote 
+        repository we need <b>git push</b>.</p>
+        <img src = "images/gitPush.png"><br>
+        <p>This pushes everything to our remote repository in GitHub and we can see it when we refresh.</p>
+        <img src = "images/filesinGithub2.png"><br>
+        <p>To check if everthing is up to date we can do <b>git pull</b>.</p>
+        <img src = "images/gitPull.png"><br>
+        <p>Everthing is up to date but if someone else had made changes committed them and pushed them to the remote 
+        repository and we did a git pull it would bring us all the latest changes.</p>
+        <p>Now if we accidentally deleted <b>.git</b> it wouldnt be so bad as we have saved a copy of all our files
+        to GitHub. (This statement is true as long as we dont change anthing).</p>
 
 
 
     </div>
-        <a href = "#">Remote Repositories</a><br>
+        <a href = "pullRequest.html">What is a pull request?</a><br>
         <a href = "index.html">Home</a>
         
 
