@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=D, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href = "style.css">
+    <title>Project1</title>
+</head>
+
+<body>
+    <div class="content">
+        <a href = "index.html">Home</a>
+        <br>
+        <br>
+    
+
+        
+        <img height = "120" width = "120" src="images/GitHubLogo.png " alt="GitBash logo with an image of a branch being created in Git">
+        <img height = "120" width = "350" src="images/gitLogo.png " alt="Git logo with word git and an image of a branch being created in Git">
+        <img height = "120" width = "120" src="images/gitBashLogo.png " alt="GitBash logo with an image of a branch being created in Git">
+        
+        <h1>Stage and Commit</h1>
+       
+      
+        <h2>Stage</h2>
+        
+        <p>We need to stage the files before we can commit them. to stage index.html
+        use <b>git add and the file name.</b>
+        </p>
+        <img src = "images/gitAdd.png"><br>
+
+        <p>We can check if git put our files in the staging area with <b>git status</b>
+        <img src = "images/gitStatus.png"><br>
+
+        <p>Yay it worked index.html is there waiting in the staging area for us to decide 
+        when to commit it or change our minds and unstage it git even tells you how to unstage 
+        it if you want to with <b>git rm</b>.  Now it is in the staging area git will start to track 
+        it and keep a record of any changes.</p>
+        <p>If we make changes to our file while it is in the staging area we will need to add it again.</p>
+        <img src = "images/changingCode.png"><br>
+        <img src = "images/changedCodeChrome.png"><br>
+        <p>Git status shows index.html has been modified and gives us an option to add it to the staging area 
+        again with git add or discard the changes with <b>git rm</b>.</p>
+        <img src = "images/restaging.png"><br>
+        <p>If we had lots of files with different extensions we can stage them all at the same time with 
+            <b>git add .</b> this also works when there is just one file. Now it is back in the staging area.</p>
+            <img src = "images/gitAddAgain.png"><br>
+            <h2>Commit</h2>
+        <p>To commit we need to use git commit and to add a comment to the commit we also need to add 
+        -m “message goes here” ie  <b>git comit -m “initial commit”.</b></p>
+        <p>If you just type git commit with no comment it will either save your commit without a comment so 
+        you wont know what it is if you ever need it in the future. Or open a vim editor for you to add a comment in vim you will have to:</p>
+        
+        <ul class="list">
+            <li>Type <b>I</b> to get into insert mode.</li>
+            <li>Enter your comment.</li>
+            <li>Escape to get out of insert mode.</li>
+            <li>Type <b>:wq</b> to exit the vim editor.</li>
+        </ul> 
+        <img src = "images/gitCommit.png"><br>
+        <p>when we check the status git confirms that everything has been committed and nothing else is waiting to be committed.</p>
+    </div>
+        <a href = "branches.html">Branches</a><br>
+        <a href = "index.html">Home</a>
+        
+
+        
+        
+        <br>
+      <br>
+      <br>    
+    </div>
+      
+    </div>
+      
+    <!-- </div> -->
+</body>
+</html>
