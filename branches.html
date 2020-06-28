@@ -35,8 +35,9 @@
         <p>We can create a feature branch from master to make our changes in we can stage our files 
             and commit them from the new branch and later when everything is completed and working 
             properly, we can push them to master.</p>
+            <h2>Creating a feature file</h2>
             <p>If we were working on a landing page we could type
-            <b>git branch landing page</b> this would create a feature branch called landing page.</p>
+            <b>git branch landingPage</b> this would create a feature branch called landing page.</p>
         <img src = "images/newBranch.png"><br>
         <p>We are still on the master branch to change to the landing page branch we need git checkout 
         name of branch <b>git checkout landingPage</b>.</p>
@@ -44,6 +45,7 @@
         <p>Now we are on the landing page branch. This has our index.html file in it and is currently 
             the same as the one in master</p>
         <img src = "images/landingPageBranch.png"><br>
+        <h2>Making changes on the feature file</h2>
         <p>But now if we make changes.</p>
         <img src = "images/changeFileNewBranch.png"><br>
         <img src = "images/changeFileNewBranchChrome.png"><br>
@@ -53,6 +55,7 @@
         to see using <b>git checkout master</b> master still has this version.</p>
         <img src = "images/masterVersion.png"><br>
         <img src = "images/masterVersionChrome.png"><br>
+        <h2>Merging back to master</h2>
         <p>In the landingPage branch we can make changes, stage and commit them and master will not be 
         changed as the commits are being made to the landingPage branch instead of master.</p>
         <p>Now everthing is completed we can merge everthing back into master.  We need to go into the 
