@@ -1,98 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=D, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href = "style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Project1</title>
 </head>
 
 <body>
     <div class="content">
-        <a href = "index.html">Home</a>
+        <br>
+        <a href="index.html">Home</a>
         <br>
         <br>
-    
 
-        
-        <img height = "120" width = "120" src="images/GitHubLogo.png " alt="GitBash logo with an image of a branch being created in Git">
-        <img height = "120" width = "350" src="images/gitLogo.png " alt="Git logo with word git and an image of a branch being created in Git">
-        <img height = "120" width = "120" src="images/gitBashLogo.png " alt="GitBash logo with an image of a branch being created in Git">
-        
+        <img height="120" width="120" src="images/GitHubLogo.png "
+            alt="GitBash logo with an image of a branch being created in Git">
+        <img height="120" width="350" src="images/gitLogo.png "
+            alt="Git logo with word git and an image of a branch being created in Git">
+        <img height="120" width="120" src="images/gitBashLogo.png "
+            alt="GitBash logo with an image of a branch being created in Git">
+
         <h1>Remote Repositories</h1>
         <h2>Making a Remote Repository</h2>
-       
-      
-        
-        
-        <p>To create a remote repository and link it to our local. Go to <b>GitHub</b> sign in and click on <b>your repositories</b>.</p>
 
-        <img src = "images/yourRepositoriesGitHub.png"><br>
+        <p>To create a remote repository and link it to our local. Go to <b>GitHub</b> sign in and click on <b>your
+                repositories</b>.</p>
+
+        <img src="images/yourRepositoriesGitHub.png" alt="Your repositories page in GitHub"><br>
 
         <p>Click <b>New</b>.</p>
-            
-        <img src = "images/createNewRepositoryGithub.png"><br>
 
-        <p>Give it a name, description choose public or private etc you can choose to add a README file if you want this is a place 
-        to store details of what your repository is about for anyone who uses it.</p>
-        <img src = "images/createNewRepositoryGithub2.png"><br>
-        <p>Click <b>create repository</b>.</p></p>
-        <img src = "images/getGithubLink.png"><br>
+        <img src="images/createNewRepositoryGithub.png" alt="Page in Github to create a new repsitory."><br>
+
+        <p>Give it a name, description choose public or private etc you can choose to add a README file if you want this
+            is a place
+            to store details of what your repository is about for anyone who uses it.</p>
+        <img src="images/createNewRepositoryGithub2.png" alt="Page in Github to create a new repsitory with name HelloWorld 
+        added for new repository name."><br>
+        <p>Click <b>create repository</b>.</p>
+        </p>
+        <img src="images/getGithubLink.png"
+            alt="Set up page in GitHub with git remote add origin and url of new repositry highlighted."><br>
         <p>Copy the highlighted link and go back to bash.</p>
-        
+
         <h2>Adding a Remote Repository to your project</h2>
         <p><b>git remote</b> lists the remote repositories.</p>
-        <img src = "images/gitRemote.png"><br>
+        <img src="images/gitRemote.png" alt="Bash entered git remote bash response nothing."><br>
         <p>There are no remote repositories to add the new one we just made paste the highlighted line into bash</p>
-        <img src = "images/pasteRemoteAddressBash.png"><br>
-        <p>Now we have added our remote repository to git and it is called origin. Now copy and paste the next 
-        highlighted line into bash.</p>
-        <img src = "images/pasteNextLineFromGitHub.png"><br>
-        <img src = "images/pasteNextLineFromGitHub2.png"><br>
+        <img src="images/pasteRemoteAddressBash.png"
+            alt="Entered git remote add origin https://github.com/AlexKynoch/HelloWorld.git bash entered git remote bash response origin."><br>
+        <p>Now we have added our remote repository to git and it is called origin. Now copy and paste the next
+            highlighted line into bash.</p>
+        <img src="images/pasteNextLineFromGitHub.png"
+            alt="Set up page in GitHub with git push -u origin master highlighted."><br>
+        <img src="images/pasteNextLineFromGitHub2.png"
+            alt="Bash git push -u origin master Bash response Branch master set up to track remote branch master from origin."><br>
         <p>This pushes everything to the new repository when you refresh GitHub all your files should be there.</p>
-        <img src = "images/filesInGithub.png"><br>
+        <img src="images/filesInGithub.png" alt="GitHub repository now showing index.html file saved "><br>
         <h2>Adding new content</h2>
 
         <p>Index.html is now in the remote repository. If we add a new file</p>
-        <img src = "images/addANewFile.png"><br>
+        <img src="images/addANewFile.png" alt="Bash entered nano landingPage.html"><br>
         <p>Add content to it.</p>
-        <img src = "images/newFileInNano.png"><br>
-        <p>Its not tracked. (Probably should have done this in a feature branch you can find out all about branches on the
-        <a href = "branches.html">branches page</a>).</p>
-        
-        <img src = "images/untrakedFiles.png"><br>
+        <img src="images/newFileInNano.png"
+            alt="Simple html file created in nano editor with title Hello world and Landing page coming soon in body."><br>
+        <p>Its not tracked. (Probably should have done this in a feature branch you can find out all about branches on
+            the
+            <a href="branches.html">branches page</a>).</p>
+
+        <img src="images/untrakedFiles.png" alt='Bash entered git status bash response untracked files landingPage.html nothing added to commit but untracked
+        files present use "git add" to track.'><br>
         <p><b>git add .</b> to stage it, now it is being tracked and <b>git commit</b>.</p>
-        <img src = "images/addAndCommit.png"><br>
+        <img src="images/addAndCommit.png"
+            alt='Bash entered git add. entered git status bash response changes to be committed new file landingPage.html bash 
+        entered git commit -m"landingPage.html file created bash response 1 file changed create mode 100644 landingPage.html.'><br>
         <h2>Pushing to GitHub</h2>
 
-        <p>The new file landingPage.html is saved but only to our local repository to send it to the remote 
-        repository we need <b>git push</b>.</p>
-        <img src = "images/gitPush.png"><br>
+        <p>The new file landingPage.html is saved but only to our local repository to send it to the remote
+            repository we need <b>git push</b>.</p>
+        <img src="images/gitPush.png" alt="Bash entered git push response done."><br>
         <p>This pushes everything to our remote repository in GitHub and we can see it when we refresh.</p>
-        <img src = "images/filesinGithub2.png"><br>
+        <img src="images/filesinGithub2.png"
+            alt="GitHub repository now showing two files saved index.html and landingPage.html "><br>
         <p>To check if everthing is up to date we can do <b>git pull</b>.</p>
-        <img src = "images/gitPull.png"><br>
-        <p>Everthing is up to date but if someone else had made changes committed them and pushed them to the remote 
-        repository and we did a git pull it would bring us all the latest changes.</p>
+        <img src="images/gitPull.png" alt="Bash entered git pull bash response Already up to date."><br>
+        <p>Everthing is up to date but if someone else had made changes committed them and pushed them to the remote
+            repository and we did a git pull it would bring us all the latest changes.</p>
         <p>Now if we accidentally deleted <b>.git</b> it wouldnt be so bad as we have saved a copy of all our files
-        to GitHub. (This statement is true as long as we dont change anthing).</p>
-
-
+            to GitHub. (This statement is true as long as we dont change anthing).</p>
 
     </div>
-        <a href = "pullRequest.html">What is a pull request?</a><br>
-        <a href = "index.html">Home</a>
-        
+    <a href="pullRequest.html">What is a pull request?</a><br>
+    <a href="index.html">Home</a>
 
-        
-        
-        <br>
-      <br>
-      <br>    
+    <br>
+    <br>
+    <br>
     </div>
-      
+
     </div>
-      
-    <!-- </div> -->
+
 </body>
+
 </html>

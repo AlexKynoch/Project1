@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=D, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href = "style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Project1</title>
 </head>
 
 <body>
     <div class="content">
-        <a href = "index.html">Home</a>
+        <br>
+        <a href="index.html">Home</a>
         <br>
         <br>
-    
 
-        
-        <img height = "120" width = "120" src="images/GitHubLogo.png " alt="GitBash logo with an image of a branch being created in Git">
-        <img height = "120" width = "350" src="images/gitLogo.png " alt="Git logo with word git and an image of a branch being created in Git">
-        <img height = "120" width = "120" src="images/gitBashLogo.png " alt="GitBash logo with an image of a branch being created in Git">
-        
+        <img height="120" width="120" src="images/GitHubLogo.png "
+            alt="GitBash logo with an image of a branch being created in Git">
+        <img height="120" width="350" src="images/gitLogo.png "
+            alt="Git logo with word git and an image of a branch being created in Git">
+        <img height="120" width="120" src="images/gitBashLogo.png "
+            alt="GitBash logo with an image of a branch being created in Git">
+
         <h1>Branches</h1>
-       
-      
-        
-        
-        <p>Git status shows we are currently on the master branch we don’t want 
-        to push our code to the master branch as the master branch is used for production ready 
-        working code. if our work was only partially completed or wrong it would break code that 
-        is currently on the master branch and working. It is safer to move our files onto a 
-        different branch to make changes.</p>
 
-        <img src = "images/workflow.png"><br>
+        <p>Git status shows we are currently on the master branch we don’t want
+            to push our code to the master branch as the master branch is used for production ready
+            working code. if our work was only partially completed or wrong it would break code that
+            is currently on the master branch and working. It is safer to move our files onto a
+            different branch to make changes.</p>
 
-        <p>We can create a feature branch from master to make our changes in we can stage our files 
-            and commit them from the new branch and later when everything is completed and working 
+        <img src="images/workflow.png" alt="GitHub workflow diagram. Creating a feature branch from master. 
+        Master represented as a horizontal line, the feature branch line moves down from master following in
+        paralell to the right with circles along the way to highlight. Making commits, submitting pull requests and 
+        discussing proposed changes until both lines converge again at merge feature branch back into master" .><br>
+
+        <p>We can create a feature branch from master to make our changes in we can stage our files
+            and commit them from the new branch and later when everything is completed and working
             properly, we can push them to master.</p>
-            <h2>Creating a feature file</h2>
-            <p>If we were working on a landing page we could type
+        <h2>Creating a feature file</h2>
+        <p>If we were working on a landing page we could type
             <b>git branch landingPage</b> this would create a feature branch called landing page.</p>
-        <img src = "images/newBranch.png"><br>
-        <p>We are still on the master branch to change to the landing page branch we need git checkout 
-        name of branch <b>git checkout landingPage</b>.</p>
-        <img src = "images/gitCheckout.png"><br>
-        <p>Now we are on the landing page branch. This has our index.html file in it and is currently 
+        <img src="images/newBranch.png" alt="Bash entered - git branch landingPage"><br>
+        <p>We are still on the master branch to change to the landing page branch we need git checkout
+            name of branch <b>git checkout landingPage</b>.</p>
+        <img src="images/gitCheckout.png"
+            alt="entered git checkout landingPage bash response switched to branch 'landingPage'."><br>
+        <p>Now we are on the landing page branch. This has our index.html file in it and is currently
             the same as the one in master</p>
-        <img src = "images/landingPageBranch.png"><br>
+        <img src="images/landingPageBranch.png"
+            alt="Entered ls bash response shows index.html on landingPage branch"><br>
         <h2>Making changes on the feature file</h2>
         <p>But now if we make changes.</p>
-        <img src = "images/changeFileNewBranch.png"><br>
-        <img src = "images/changeFileNewBranchChrome.png"><br>
+        <img src="images/changeFileNewBranch.png"
+            alt="Notepad -This will be the landing page,  Added to the body of simple html file"><br>
+        <img src="images/changeFileNewBranchChrome.png"
+            alt="Chrome web browser - This will be the landing page, this is my first website Lets change this."><br>
         <p>Stage and commit them.</p>
-        <img src = "images/commitToNewBranch.png"><br>
-        <p>They are saved to the landing page branch but not the master branch, we can go back to master 
-        to see using <b>git checkout master</b> master still has this version.</p>
-        <img src = "images/masterVersion.png"><br>
-        <img src = "images/masterVersionChrome.png"><br>
+        <img src="images/commitToNewBranch.png" alt='git commit -m "marker placed for landing page" bash response landingPage 038079e marker placed for landing page. 
+        git status bash Response on branch landingPage nothing to commit working tree clean'><br>
+        <p>They are saved to the landing page branch but not the master branch, we can go back to master
+            to see using <b>git checkout master</b> master still has this version.</p>
+        <img src="images/masterVersion.png"
+            alt="Notepad -This will be the landing page,  no longer in the body of simple html file"><br>
+        <img src="images/masterVersionChrome.png"
+            alt="Chrome web browser - This is my first website Lets change this."><br>
         <h2>Merging back to master</h2>
-        <p>In the landingPage branch we can make changes, stage and commit them and master will not be 
-        changed as the commits are being made to the landingPage branch instead of master.</p>
-        <p>Now everthing is completed we can merge everthing back into master.  We need to go into the 
-        master branch <b>git checkout master</b> and git merge branch name <b>git merge landingPage.</b></p>
-        <img src = "images/gitMerge.png"><br>
+        <p>In the landingPage branch we can make changes, stage and commit them and master will not be
+            changed as the commits are being made to the landingPage branch instead of master.</p>
+        <p>Now everthing is completed we can merge everthing back into master. We need to go into the
+            master branch <b>git checkout master</b> and git merge branch name <b>git merge landingPage.</b></p>
+        <img src="images/gitMerge.png" alt="entered git checkout master bash response switched to branch 'master' git merge landingPage
+        bash response index.html 1 file changed  1 insertion."><br>
         <p>Now when we look at index.html from master it includes our changes.</p>
-        <img src = "images/masterWithChanges.png"><br>
-        <img src = "images/masterWithChangesChrome.png"><br>
-
-
+        <img src="images/masterWithChanges.png"
+            alt="Notepad -This will be the landing page,  now back in the body of simple html file"><br>
+        <img src="images/masterWithChangesChrome.png"
+            alt="This will be the landing page, this is my first website Lets change this. Is now back in chrome."><br>
 
     </div>
-        <a href = "GitHub.html">Remote Repositories</a><br>
-        <a href = "index.html">Home</a>
-        
+    <a href="GitHub.html">Remote Repositories</a><br>
+    <a href="index.html">Home</a>
 
-        
-        
-        <br>
-      <br>
-      <br>    
+
+
+
+    <br>
+    <br>
+    <br>
     </div>
-      
+
     </div>
-      
-    <!-- </div> -->
+
 </body>
+
 </html>

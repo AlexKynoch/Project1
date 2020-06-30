@@ -10,11 +10,10 @@
 
 <body>
     <div class="content">
+        <br>
         <a href="index.html">Home</a>
         <br>
         <br>
-
-
 
         <img height="120" width="120" src="images/GitHubLogo.png "
             alt="GitBash logo with an image of a branch being created in Git">
@@ -30,30 +29,30 @@
             but what if we just open bash on its own how do we find the directory we want.
         </p>
 
-        <img src="images/bashOpening2.png">
-        <p>Wherever bash opens <b>cd</b> takes you to your home directory. <b>ls</b> lists 
+        <img src="images/bashOpening2.png" alt="Bash opening.">
+        <p>Wherever bash opens <b>cd</b> takes you to your home directory. <b>ls</b> lists
             everthing in that directory</p>
-            <p>ls -F shows us what type they are by adding an extra character:</p>
-            <ul class="list2">
-                <li><b>@</b> is a symlink</li>
-                <li><b>/</b> is a directory</li>
-                <li><b>|</b> is a named pipe</li>
-                <li><b>=</b> is a socket</li>
-                <li><b>*</b> is an executable file</li>
-            </ul>
-        <img src="images/cdInBash.png">
-      
+        <p>ls -F shows us what type they are by adding an extra character:</p>
+        <ul class="list2">
+            <li><b>@</b> is a symlink</li>
+            <li><b>/</b> is a directory</li>
+            <li><b>|</b> is a named pipe</li>
+            <li><b>=</b> is a socket</li>
+            <li><b>*</b> is an executable file</li>
+        </ul>
+        <img src="images/cdInBash.png" alt="Bash entered cd bash entered ls.">
+
 
         <h2>Navigating to our folder</h2>
 
 
-        
-        <p>My folder's location is C:\Users\alex\Desktop\HelloWorld\HelloWorld. <b>pwd</b> prints the path 
+
+        <p>My folder's location is C:\Users\alex\Desktop\HelloWorld\HelloWorld. <b>pwd</b> prints the path
             of the current working directory.</p>
-            <img src="images/usersBash.png">
-            <p>So we are currently in /c/Users/alex and need to get to C:\Users\alex\Desktop\HelloWorld\HelloWorld
-            </p>
-            <img src="images/upALevelBash.png">
+        <img src="images/usersBash.png" alt="bash entered pwd bash response /c/users/alex.">
+        <p>So we are currently in /c/Users/alex and need to get to C:\Users\alex\Desktop\HelloWorld\HelloWorld
+        </p>
+        <img src="images/upALevelBash.png" alt="Bash response huge list of files only last 3 shown in image.">
         <p><b>ls</b> listed too many files to show but one of them was Desktop. <b>cd and the folder name </b>
             takes you into that folder.</p>
         <p><b>cd Desktop</b>
@@ -61,61 +60,70 @@
             to get into the folder called HelloWorld.</p>
 
 
-        <img src="images/navigateToFolderBash.png">
+        <img src="images/navigateToFolderBash.png" alt="Bash entered cd Desktop/ enter cd HelloWorld enter cd 
+        HelloWorld/ enter ls bash response index.html landingPage.html.">
 
         <h2>Making a directory</h2>
         <p>Now we are where we wanted to be we can make new directory with <b>mkdir</b></p>
-        
-        <img src="images/mkDirBash.png">
+
+        <img src="images/mkDirBash.png"
+            alt="Bash entered mkdir backup enter bash entered ls bash response backup/ index.html landingPage.html.">
 
         <h2>Making a file for the directory</h2>
-        <p>We can create files to go in this directory by going into the new directory <b>cd 
-            backup</b> using nano or touch as we did previously.</p>
-            <h2>Copying a file into a directory</h2>
+        <p>We can create files to go in this directory by going into the new directory <b>cd
+                backup</b> using nano or touch as we did previously.</p>
+        <h2>Copying a file into a directory</h2>
         <p>we can also copy files with <b>cp</b>, we can copy landingPage.html into our new
             directory backup using the name of the file we want to move and its new location
-        with <b>cp landingPage.html backup/
-        </b> </p>
-        <img src="images/copyFileBash.png">
-        <h2>copying a directory</h2>
-        <p>We can also copy directories with cp - r the name of the directory we want to copy 
+            with <b>cp landingPage.html backup/
+            </b> </p>
+        <img src="images/copyFileBash.png" alt="Bash entered cp landingPage.html backup/ bash entered 
+        ls bash response backup/ index.html landingPage bash entered cd backup/ bash entered ls 
+        bash response landingPage.html.">
+        <h2>Copying a directory</h2>
+        <p>We can also copy directories with cp - r the name of the directory we want to copy
             and the name for the new copy<b> cp -r backup/ backup_again</b></p>
-        <img src="images/copyDirectoriesBash.png">
+        <img src="images/copyDirectoriesBash.png" alt="Bash entered cp -r backup/ backup_again bash entered 
+        ls bash response backup/ backup_again/ index.html landingPage.html bash entered cd backup_again bash entered
+        ls bash response landingPage.html.">
         <h2>Removing a file</h2>
-        
+
         <p>We can remove a file using <b>rm</b> and the name of the file <b>rm landingPage.html</b></p>
-        <img src="images/removingFileBash.png">
+        <img src="images/removingFileBash.png"
+            alt="Bash entered rm landingPage.html bash entered ls bash response empty.">
         <h2>Removing a directory</h2>
-        <p>We can remove the backup_again directory using <b>rm -ir</b> and the directory name <b>rm -ir backup_again</b></p>
-        
-        <img src="images/removeDirectoryBash.png">
+        <p>We can remove the backup_again directory using <b>rm -ir</b> and the directory name <b>rm -ir
+                backup_again</b></p>
+
+        <img src="images/removeDirectoryBash.png" alt="Bash entered rm -ir backup-again/ bash response rm: remove directory 
+        'backup_again/'? bash entered Y bash entered ls bash response backup/ index.html landingPage.html. " .>
 
         <h2>Moving files</h2>
 
-        <p>We can move index.html into landingPage.html with <b>mv</b> current file name and file name where it is going (target) 
+        <p>We can move index.html into landingPage.html with <b>mv</b> current file name and file name where it is going
+            (target)
             <b>mv index.html landingPage.html</b></p>
-        <img src="images/moveFilesBash.png">
+        <img src="images/moveFilesBash.png" alt="Bash entered mv index.html landingPage.html bash entered ls bash response backup/
+        landingPage.html.">
         <h2>Moving Directories</h2>
-        
-        <img src="images/moveDirectoryBash.png">
-
-
-
+        <p>We only have one directory here so need to make a new one before we can move anything into it. We can make a
+            directory called new_backup using <b>mkdir new_backup</b> then move the backup directory into the new-backup
+            directory</p>
+        <img src="images/moveDirectoryBash.png"
+            alt="Bash entered mkdir new_backup bash entered ls bash response backup/ landingPage.html new_backup/ bash entered
+        mv backup/ new_backup/ bash entered ls bash response landingPage.html new_backup/ bash entered cd new_backup bash entered ls bash response backup/.">
+        <p>Now the backup directory has moved into the directory called new_backup.</p>
     </div>
-
-
     <br>
 
     <a href="index.html">Home</a></li>
     <br>
     <br>
     <br>
-
     </div>
 
     </div>
 
-    
 </body>
 
 </html>
